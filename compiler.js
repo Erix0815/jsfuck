@@ -110,11 +110,9 @@ class encoder {
     }
 }
 
-
-let compiled = code.compile(
-    `console.log("Hello, world!"); return 0;`
-)
-console.log(`Code: ${compiled.text}`)
-console.log("Output:")
-let result = eval(compiled.text)
-console.log(`Return: ${result}`)
+if (process.argv.length > 2){
+    const fs = require('fs');
+    for (f of process.argv.slice(2)){
+        fs.writeFile(f+"fuck", code.compile(fs.readFileSync(f, {encoding: "utf8"})).text, ()=>{})
+    }
+}

@@ -11,9 +11,15 @@ It's Javascript, but written only with a **very** samll subset of characters, mo
 
 ## how can I compile my code?
 
-Features like commandline-arguments are still missing from the compiler. Currently, at the end of `compiler.js` a [Hello, world!](https://esolangs.org/wiki/Hello,_world!)-program is coompiled and run, just change it to your code for the time beeing.
+put yor code in `test.js` and run `make`\
+alternatively:
+```bash
+node compiler.js file1.js file2.js ...
+```
+will read your code from `file1.js` and save the compiled code to `file1.jsfuck` and so on
 
-## future plans for the compiler
+## possible future features for the compiler (if i feel like it)
 
-- reading/writing code from/to files (commandline-arguments)
+- compilling multiple files to one\
+  (better commandline-args, like `-o`)
 - including a minimizer (for the original js-code)
