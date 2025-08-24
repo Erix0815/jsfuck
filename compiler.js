@@ -44,7 +44,6 @@ const compile = code => {
 
 string_generators.push (
     "[][[]]+[]",
-    "[]+{}",
     `(${bool(true)})+[]`,
     `(${bool(false)})+[]`,
     "+[![]]+[]",
@@ -55,6 +54,8 @@ string_generators.push(
     `+(${str("1e309")})+[]`,
     `+(${str("11e100")})+[]`,
     `[][${str("find")}]+[]`,
+)
+string_generators.push(
     `([]+[])[${str("fontcolor")}]()`,
 )
 const ctor = `[${str("constructor")}]`
